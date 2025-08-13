@@ -14,7 +14,7 @@ import {
 
 const DashboardHeader = () => {
   const modules = [
-    { id: 'detection', name: 'Detection', icon: Eye, active: true },
+    { id: 'surveillance', name: 'Surveillance', icon: Eye, active: true },
     { id: 'response', name: 'Response', icon: Zap, active: false },
     { id: 'protection', name: 'Protection', icon: Shield, active: false },
     { id: 'prediction', name: 'Prediction', icon: Target, active: false },
