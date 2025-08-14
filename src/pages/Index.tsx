@@ -23,7 +23,7 @@ const SurveillanceModule: React.FC = () => (
       </div>
     </div>
     <div>
-      <h2 className="text-2xl font-bold text-foreground mb-4">Legacy Sensor Network</h2>
+      <h2 className="text-h3 text-foreground mb-4">Legacy Sensor Network</h2>
       <SensorGrid />
     </div>
   </div>
@@ -47,7 +47,7 @@ const Index = () => {
   const ActiveModuleComponent = moduleConfig[activeModule].component;
 
   return (
-    <div className="min-h-screen bg-gradient-dashboard">
+    <div className="min-h-screen bg-gradient-dashboard font-sans">
       <DashboardHeader />
       
       <div className="p-6 space-y-6">
@@ -60,7 +60,7 @@ const Index = () => {
             <button
               key={moduleName}
               onClick={() => setActiveModule(moduleName)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 rounded-lg text-body-sm font-medium transition-all duration-300 hover:shadow-glow ${
                 activeModule === moduleName
                   ? 'bg-primary text-primary-foreground shadow-glow'
                   : 'bg-muted/20 text-muted-foreground hover:bg-muted/40 hover:text-foreground'

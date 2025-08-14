@@ -49,18 +49,18 @@ const StatsCards = () => {
               <div className="p-2 rounded-lg bg-primary/10">
                 <IconComponent className="h-5 w-5 text-primary" />
               </div>
-              <div className={`flex items-center gap-1 text-xs ${
+              <div className={`flex items-center gap-1 text-caption ${
                 stat.changeType === 'positive' ? 'text-success' : 'text-critical'
               }`}>
                 <TrendIcon className="h-3 w-3" />
-                <span>{stat.change}</span>
+                <span className="font-medium">{stat.change}</span>
               </div>
             </div>
             
             <div className="space-y-1">
-              <p className="text-sm text-muted-foreground">{stat.title}</p>
-              <p className="text-2xl font-bold text-foreground">{stat.value}</p>
-              <p className="text-xs text-muted-foreground">{stat.description}</p>
+              <p className="text-caption text-muted-foreground">{stat.title}</p>
+              <p className="text-h3 text-foreground">{stat.value}</p>
+              <p className="text-caption text-muted-foreground">{stat.description}</p>
             </div>
           </Card>
         );

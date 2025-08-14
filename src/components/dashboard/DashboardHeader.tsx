@@ -29,8 +29,8 @@ const DashboardHeader = () => {
             <div className="flex items-center gap-2">
               <Shield className="h-8 w-8 text-primary glow-primary" />
               <div>
-                <h1 className="text-2xl font-bold gradient-text">AgriSecure AI</h1>
-                <p className="text-sm text-muted-foreground">Agricultural Biosecurity Platform</p>
+                <h1 className="text-h3 gradient-text">AgriSecure AI</h1>
+                <p className="text-body-sm text-muted-foreground">Agricultural Biosecurity Platform</p>
               </div>
             </div>
             <Badge className="bg-success text-success-foreground">
@@ -39,18 +39,18 @@ const DashboardHeader = () => {
           </div>
           
           <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm" className="h-8">
+            <Button variant="outline" size="sm" className="h-8 hover:shadow-glow transition-all duration-300">
               <RefreshCw className="h-3 w-3 mr-1" />
-              Refresh
+              <span className="text-body-sm">Refresh</span>
             </Button>
-            <Button variant="outline" size="sm" className="h-8">
+            <Button variant="outline" size="sm" className="h-8 hover:shadow-glow transition-all duration-300 relative">
               <Bell className="h-3 w-3 mr-1" />
-              <Badge className="ml-1 bg-critical text-critical-foreground text-xs px-1">3</Badge>
+              <Badge className="ml-1 bg-critical text-critical-foreground text-caption px-1 animate-pulse">3</Badge>
             </Button>
-            <Button variant="outline" size="sm" className="h-8">
+            <Button variant="outline" size="sm" className="h-8 hover:shadow-glow transition-all duration-300">
               <Settings className="h-3 w-3" />
             </Button>
-            <Button variant="outline" size="sm" className="h-8">
+            <Button variant="outline" size="sm" className="h-8 hover:shadow-glow transition-all duration-300">
               <User className="h-3 w-3" />
             </Button>
           </div>

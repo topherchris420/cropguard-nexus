@@ -83,7 +83,7 @@ const AlertPanel = () => {
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2">
           <AlertTriangle className="h-5 w-5 text-warning" />
-          <h3 className="text-xl font-semibold text-foreground">Active Alerts</h3>
+          <h3 className="text-h4 text-foreground">Active Alerts</h3>
         </div>
         <div className="flex gap-2">
           <Button variant="outline" size="sm" className="h-8">
@@ -106,24 +106,24 @@ const AlertPanel = () => {
             >
               <div className="flex items-start justify-between mb-2">
                 <div className="flex items-center gap-2">
-                  <Badge variant={getBadgeVariant(alert.type)} className="text-xs">
+                  <Badge variant={getBadgeVariant(alert.type)} className="text-caption">
                     {alert.type}
                   </Badge>
-                  <span className={`text-xs font-medium ${getStatusColor(alert.status)}`}>
+                  <span className={`text-caption font-medium ${getStatusColor(alert.status)}`}>
                     {alert.status.toUpperCase()}
                   </span>
                 </div>
-                <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                <div className="flex items-center gap-1 text-caption text-muted-foreground">
                   <Clock className="h-3 w-3" />
                   {new Date(alert.timestamp).toLocaleTimeString()}
                 </div>
               </div>
               
-              <h4 className="font-medium text-foreground mb-1">{alert.title}</h4>
-              <p className="text-sm text-muted-foreground mb-3">{alert.description}</p>
+              <h4 className="text-body font-medium text-foreground mb-1">{alert.title}</h4>
+              <p className="text-body-sm text-muted-foreground mb-3">{alert.description}</p>
               
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                <div className="flex items-center gap-4 text-caption text-muted-foreground">
                   <span>Source: {alert.source}</span>
                   <span>Confidence: {alert.confidence}%</span>
                 </div>
@@ -137,7 +137,7 @@ const AlertPanel = () => {
       </ScrollArea>
 
       <div className="mt-4 pt-4 border-t border-border">
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center justify-between text-body-sm">
           <span className="text-muted-foreground">
             {alerts.length} active alerts
           </span>

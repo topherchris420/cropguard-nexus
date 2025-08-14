@@ -22,23 +22,23 @@ const ThreatMap = () => {
   return (
     <Card className="p-6 h-full bg-card border-border shadow-card">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-foreground">Global Threat Map</h3>
+        <h3 className="text-h4 text-foreground">Global Threat Map</h3>
         <div className="flex gap-2">
           <div className="flex items-center gap-1">
             <div className="w-2 h-2 rounded-full bg-threat-critical"></div>
-            <span className="text-xs text-muted-foreground">Critical</span>
+            <span className="text-caption text-muted-foreground">Critical</span>
           </div>
           <div className="flex items-center gap-1">
             <div className="w-2 h-2 rounded-full bg-threat-high"></div>
-            <span className="text-xs text-muted-foreground">High</span>
+            <span className="text-caption text-muted-foreground">High</span>
           </div>
           <div className="flex items-center gap-1">
             <div className="w-2 h-2 rounded-full bg-threat-medium"></div>
-            <span className="text-xs text-muted-foreground">Medium</span>
+            <span className="text-caption text-muted-foreground">Medium</span>
           </div>
           <div className="flex items-center gap-1">
             <div className="w-2 h-2 rounded-full bg-threat-low"></div>
-            <span className="text-xs text-muted-foreground">Low</span>
+            <span className="text-caption text-muted-foreground">Low</span>
           </div>
         </div>
       </div>
@@ -73,14 +73,14 @@ const ThreatMap = () => {
       </div>
       
       <div className="mt-4 space-y-2">
-        <h4 className="text-sm font-medium text-foreground">Active Threats</h4>
+        <h4 className="text-body font-medium text-foreground">Active Threats</h4>
         {threats.map((threat) => (
           <div key={threat.id} className="flex items-center justify-between p-2 rounded-lg bg-muted/20">
             <div className="flex items-center gap-2">
               <div className={`w-2 h-2 rounded-full ${getThreatColor(threat.level)}`}></div>
-              <span className="text-sm text-foreground">{threat.type}</span>
+              <span className="text-body-sm text-foreground">{threat.type}</span>
             </div>
-            <Badge variant={threat.level === 'critical' ? 'destructive' : 'secondary'} className="text-xs">
+            <Badge variant={threat.level === 'critical' ? 'destructive' : 'secondary'} className="text-caption">
               {threat.level.toUpperCase()}
             </Badge>
           </div>
